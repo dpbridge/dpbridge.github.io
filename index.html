@@ -153,7 +153,7 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Pipeline</h2>
           <div class="publication-pipeline">
-            <img src="static/images/pipeline.png" alt="pipeline">
+            <img src="./static/images/pipline.png" alt="pipeline">
             <h2 class="content has-text-justified">
                 <span class="dpbridge"><p>The training pipeline is implemented in the latent space. To overcome the discrepancy with standard diffusion process and facilitate finetuning, we derive the maximum likelihood training objective of diffusion bridge process, propose a distribution aligned normalization strategy, and assist the training with an auxiliary image consistency loss.
             </h2>
@@ -218,7 +218,11 @@
 </section>
 
 
-
+<style>
+    .publication-qualitative img:first-of-type {
+        margin-bottom: 30px;
+    }
+</style>
 <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
@@ -231,12 +235,12 @@
             <img src="./static/images/visual/depth.png">
           </div>
 
-          <h3 class="title is-4">Normal</h3>
+          <h3 class="title is-4">Surface Normal</h3>
           <div class="publication-qualitative">
             <img src="./static/images/visual/normal.png">
           </div>
 
-          <h3 class="title is-4">Segmentation</h3>
+          <h3 class="title is-4">Semantic Segmentation</h3>
           <div class="publication-qualitative">
             <img src="./static/images/visual/segm_nyuv2.png">
           </div>
@@ -252,12 +256,12 @@
             <img src="./static/images/visual/edge_multicue.png">
           </div>
 
-          <h3 class="title is-4">Style</h3>
+          <h3 class="title is-4">Style Transfer</h3>
           <div class="publication-qualitative">
             <img src="./static/images/visual/face2com.png">
           </div>
 
-          <h3 class="title is-4">Flow</h3>
+          <h3 class="title is-4">Optical Flow</h3>
           <div class="publication-qualitative">
             <img src="./static/images/visual/flow_sintel.png">
           </div>
