@@ -64,21 +64,21 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2412.20506"
+                <a href="https://arxiv.org/abs/2412.20506v3"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>arXiv</span>
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2412.20506"
+                <a href="https://arxiv.org/pdf/2412.20506v3"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Paper</span>
                 </a>
               </span>
               <!-- Code Link. -->
@@ -136,7 +136,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Diffusion models have shown remarkable capabilities in modeling complex data distributions by transforming noise into structured data through stochastic processes. However, when applied to dense prediction tasks whose goal is to capture per-pixel relationships between RGB images and dense signal maps, starting the sampling process from an uninformative Gaussian noise of- ten leads to inefficient sampling and long latency. To overcome these challenges, we propose DPBridge, a generative framework that establishes direct mapping between input RGB images and dense signal maps based on a tractable bridge process. Furthermore, we introduce finetuning strategies to leverage a pretrained large-scale image diffusion backbone, enjoying its rich visual prior knowledge to enable both efficient training and robust generalization. Experiments show that DPBridge achieves competitive performance compared to both feed-forward and diffusion-based approaches across various benchmarks, validating its effectiveness and adaptability.
+            Diffusion models demonstrate remarkable capabilities in capturing complex data distributions and have achieved compelling results in many generative tasks. While they have recently been extended to dense prediction tasks such as depth estimation and surface normal prediction, their full potential in this area remains under-explored. In dense prediction settings, target signal maps and input images are pixel-wise aligned. This makes conventional noise-to-data generation paradigm inefficient, as input images can serve as more informative prior compared to pure noise. Diffusion bridge models, which support data-to-data generation between two general data distributions, offer a promising alternative, but they typically fail to exploit the rich visual priors embedded in large pretrained foundation models. To address these limitations, we integrate diffusion bridge formulation with structured visual priors and introduce DPBridge, the first latent diffusion bridge framework for dense prediction tasks. Our method presents three key contributions: (1) a tractable reverse transition kernel for diffusion bridge process, enabling maximum likelihood training scheme for better compatibility with pretrained backbones; (2) a distribution-aligned normalization technique to mitigate the discrepancies between the bridge and standard diffusion processes; and (3) an auxiliary image consistency loss to preserve fine-grained details. Experiments across extensive benchmarks validate that our method consistently achieves superior performance, demonstrating its effectiveness and generalization capability under different scenarios.
           </p>
         </div>
       </div>
@@ -225,6 +225,16 @@
         <div class="column is-full-width">
 
           <h2 class="title is-3">Qualitative Results</h2>
+
+          <h3 class="title is-4">Depth</h3>
+          <div class="publication-qualitative">
+            <img src="./static/images/visual/depth.png">
+          </div>
+
+          <h3 class="title is-4">Normal</h3>
+          <div class="publication-qualitative">
+            <img src="./static/images/visual/normal.png">
+          </div>
 
           <h3 class="title is-4">Segmentation</h3>
           <div class="publication-qualitative">
